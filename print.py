@@ -1,1 +1,2 @@
-print("나는 인간이다")
+for i in range(1,10):
+    print("0")
