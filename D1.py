@@ -1,258 +1,28 @@
-first=0
-second=0
-a=0
-b=0
-c=0
-a_count=0
-b_count=0
-c_count=0
+n=m=a=b=c=h=j=i=k=0
+n=int(input())
+m=int(input())
+k=list(map(int, input().split()))
+k.sort()
+h=n-m
+a=int(k[0])
+b=int(k[1])
+c=int(k[2])
 
-first=int(input())
-second=int(input())
-a, b, c =input().split()
-a=int(a)
-b=int(b)
-c=int(c)
-have=first-second
-
-
-
-if a>b>c:
-    while True:
-        if have - a < 0:
-            break
-        else:
-            have = have - a
-            a_count = a_count + 1
-            continue
-    while True:
-        if have-b<0:
-            break
-        else:
-            have=have-b
-            b_count=b_count+1
-            continue
-    while True:
-        if have-c<0:
-            break
-        else:
-            have=have-c
-            c_count=c_count+1
-            continue
-
-if a>c>b:
-    while True:
-        if have - a < 0:
-            break
-        else:
-            have = have - a
-            a_count = a_count + 1
-            continue
-    while True:
-        if have-c<0:
-            break
-        else:
-            have=have-c
-            c_count=c_count+1
-            continue
-    while True:
-        if have-b<0:
-            break
-        else:
-            have=have-b
-            b_count=b_count+1
-            continue
-if b>a>c:
-    while True:
-        if have - b < 0:
-            break
-        else:
-            have = have - b
-            b_count = b_count + 1
-            continue
-    while True:
-        if have - a < 0:
-            break
-        else:
-            have = have - a
-            a_count = a_count + 1
-            continue
-    while True:
-        if have-c<0:
-            break
-        else:
-            have=have-c
-            c_count=c_count+1
-            continue
-if b>c>a:
-    while True:
-        if have-b<0:
-            break
-        else:
-            have=have-b
-            b_count=b_count+1
-            continue
-    while True:
-        if have-c<0:
-            break
-        else:
-            have=have-c
-            c_count=c_count+1
-            continue
-    while True:
-        if have - a < 0:
-            break
-        else:
-            have = have - a
-            a_count = a_count + 1
-            continue
-if c>a>b:
-    while True:
-        if have - c < 0:
-            break
-        else:
-            have = have - c
-            c_count = c_count + 1
-            continue
-    while True:
-        if have - a < 0:
-            break
-        else:
-            have = have - a
-            a_count = a_count + 1
-            continue
-    while True:
-        if have-b<0:
-            break
-        else:
-            have=have-b
-            b_count=b_count+1
-            continue
-if c>b>a:
-    while True:
-        if have-c<0:
-            break
-        else:
-            have=have-c
-            c_count=c_count+1
-            continue
-    while True:
-        if have-b<0:
-            break
-        else:
-            have=have-b
-            b_count=b_count+1
-            continue
-    while True:
-        if have - a < 0:
-            break
-        else:
-            have = have - a
-            a_count = a_count + 1
-            continue
-if a==b:
-    if b>c:
-        while True:
-            if have - b < 0:
+while True:
+    if h==0:
+       print(i)
+       break 
+    if h-c<0:
+        if h-b<0:
+            if h-a<0:
+                print(-1)
                 break
             else:
-                have = have - b
-                b_count = b_count + 1
-                continue
-        while True:
-            if have - c < 0:
-                break
-            else:
-                have = have - c
-                c_count = c_count + 1
-                continue
-    elif c>b:
-        while True:
-            if have - c < 0:
-                break
-            else:
-                have = have - c
-                c_count = c_count + 1
-                continue
-        while True:
-            if have - b < 0:
-                break
-            else:
-                have = have - b
-                b_count = b_count + 1
-                continue
-if b==c:
-    if a>b:
-        while True:
-            if have - a < 0:
-                break
-            else:
-                have = have - a
-                a_count = a_count + 1
-                continue
-        while True:
-            if have - b < 0:
-                break
-            else:
-                have = have - b
-                b_count = b_count + 1
-                continue
-    elif b>a:
-        while True:
-            if have - b < 0:
-                break
-            else:
-                have = have - b
-                b_count = b_count + 1
-                continue
-        while True:
-            if have - a < 0:
-                break
-            else:
-                have = have - a
-                a_count = a_count + 1
-                continue
-if a==c:
-    if c>b:
-        while True:
-            if have - c < 0:
-                break
-            else:
-                have = have - c
-                c_count = c_count + 1
-                continue
-        while True:
-            if have - b < 0:
-                break
-            else:
-                have = have - b
-                b_count = b_count + 1
-                continue
-    elif b>c:
-        while True:
-            if have - b < 0:
-                break
-            else:
-                have = have - b
-                b_count = b_count + 1
-                continue
-        while True:
-            if have - c < 0:
-                break
-            else:
-                have = have - c
-                c_count = c_count + 1
-                continue
-if a==b==c:
-    while True:
-        if have - a < 0:
-            break
+                i+=1
+                h-=a    
         else:
-            have = have - a
-            a_count = a_count + 1
-            continue
-sum = a_count + b_count + c_count
-if have == 0:
-    print(sum)
-else:
-    print(-1)
+            i+=1
+            h-=b
+    else:
+        i+=1
+        h-=c
