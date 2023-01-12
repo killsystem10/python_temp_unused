@@ -9,7 +9,7 @@ c_count=0
 
 first=int(input())
 second=int(input())
-a,b,c=input().split()
+a, b, c =input().split()
 a=int(a)
 b=int(b)
 c=int(c)
