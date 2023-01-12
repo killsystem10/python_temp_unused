@@ -1,2 +1,4 @@
-for i in range(10):
-    print("0")
+def test():
+    print("a")
+
+test()
