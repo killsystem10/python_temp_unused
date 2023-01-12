@@ -15,13 +15,15 @@ b=int(b)
 c=int(c)
 have=first-second
 
+
+
 if a>b>c:
     while True:
-        if have-a<0:
+        if have - a < 0:
             break
         else:
-            have=have-a
-            a_count=a_count+1
+            have = have - a
+            a_count = a_count + 1
             continue
     while True:
         if have-b<0:
@@ -37,13 +39,14 @@ if a>b>c:
             have=have-c
             c_count=c_count+1
             continue
+
 if a>c>b:
     while True:
-        if have-a<0:
+        if have - a < 0:
             break
         else:
-            have=have-a
-            a_count=a_count+1
+            have = have - a
+            a_count = a_count + 1
             continue
     while True:
         if have-c<0:
@@ -61,26 +64,26 @@ if a>c>b:
             continue
 if b>a>c:
     while True:
-        if have-b<0:
+        if have - b < 0:
             break
         else:
-            have=have-b
-            b_count=b_count+1
+            have = have - b
+            b_count = b_count + 1
             continue
     while True:
-        if have-a<0:
+        if have - a < 0:
             break
-        else:   
-            have=have-a
-            a_count=a_count+1
+        else:
+            have = have - a
+            a_count = a_count + 1
             continue
-        while True:
-            if have-c<0:
-                break
-            else:   
-                have=have-c
-                c_count=c_count+1
-                continue
+    while True:
+        if have-c<0:
+            break
+        else:
+            have=have-c
+            c_count=c_count+1
+            continue
 if b>c>a:
     while True:
         if have-b<0:
@@ -97,26 +100,26 @@ if b>c>a:
             c_count=c_count+1
             continue
     while True:
-        if have-a<0:
+        if have - a < 0:
             break
         else:
-            have=have-a
-            a_count=a_count+1
+            have = have - a
+            a_count = a_count + 1
             continue
 if c>a>b:
     while True:
-        if have-c<0:
+        if have - c < 0:
             break
         else:
-            have=have-c
-            c_count=c_count+1
+            have = have - c
+            c_count = c_count + 1
             continue
     while True:
-        if have-a<0:
+        if have - a < 0:
             break
         else:
-            have=have-a
-            a_count=a_count+1
+            have = have - a
+            a_count = a_count + 1
             continue
     while True:
         if have-b<0:
@@ -141,15 +144,115 @@ if c>b>a:
             b_count=b_count+1
             continue
     while True:
-        if have-a<0:    
+        if have - a < 0:
             break
         else:
-            have=have-a
-            a_count=a_count+1
+            have = have - a
+            a_count = a_count + 1
             continue
-sum=a_count+b_count+c_count
-if have==0:
+if a==b:
+    if b>c:
+        while True:
+            if have - b < 0:
+                break
+            else:
+                have = have - b
+                b_count = b_count + 1
+                continue
+        while True:
+            if have - c < 0:
+                break
+            else:
+                have = have - c
+                c_count = c_count + 1
+                continue
+    elif c>b:
+        while True:
+            if have - c < 0:
+                break
+            else:
+                have = have - c
+                c_count = c_count + 1
+                continue
+        while True:
+            if have - b < 0:
+                break
+            else:
+                have = have - b
+                b_count = b_count + 1
+                continue
+if b==c:
+    if a>b:
+        while True:
+            if have - a < 0:
+                break
+            else:
+                have = have - a
+                a_count = a_count + 1
+                continue
+        while True:
+            if have - b < 0:
+                break
+            else:
+                have = have - b
+                b_count = b_count + 1
+                continue
+    elif b>a:
+        while True:
+            if have - b < 0:
+                break
+            else:
+                have = have - b
+                b_count = b_count + 1
+                continue
+        while True:
+            if have - a < 0:
+                break
+            else:
+                have = have - a
+                a_count = a_count + 1
+                continue
+if a==c:
+    if c>b:
+        while True:
+            if have - c < 0:
+                break
+            else:
+                have = have - c
+                c_count = c_count + 1
+                continue
+        while True:
+            if have - b < 0:
+                break
+            else:
+                have = have - b
+                b_count = b_count + 1
+                continue
+    elif b>c:
+        while True:
+            if have - b < 0:
+                break
+            else:
+                have = have - b
+                b_count = b_count + 1
+                continue
+        while True:
+            if have - c < 0:
+                break
+            else:
+                have = have - c
+                c_count = c_count + 1
+                continue
+if a==b==c:
+    while True:
+        if have - a < 0:
+            break
+        else:
+            have = have - a
+            a_count = a_count + 1
+            continue
+sum = a_count + b_count + c_count
+if have == 0:
     print(sum)
 else:
     print(-1)
-
