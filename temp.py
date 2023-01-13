@@ -11,13 +11,13 @@ for i in range(11):
     if nexh==0:
         break
     else:
-        if preh>nexh:
+        if preh<nexh:
             temp=preh-nexh
             usebattery=usebattery+2*temp
-        elif preh<nexh:
+        elif preh>nexh:
             temp=nexh-preh
             temp=temp//2
             savebattery=savebattery+temp//2
 
-resultbattery=usebattery-savebattery
+resultbattery=savebattery-usebattery
 print(resultbattery)
