@@ -11,8 +11,6 @@ high=input().split()
 high=list(map(int,high))
 high.append(0)
 
-
-
 for i in range(len(high)):
     preh=high[i]
     nexh=high[i+1]
