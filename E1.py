@@ -1,17 +1,16 @@
 preh=0
 nexh=0
-battery=0
 usebattery=0
 savebattery=0
 temp=0
 high=[]
 
-temp=int(input())
+score=int(input())
 high=input().split()
 high=list(map(int,high))
 high.append(-1)
 
-for i in range(len(high)):
+for i in range(score):
     preh=high[i]
     nexh=high[i+1]
     if nexh==-1:
