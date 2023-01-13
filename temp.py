@@ -1,7 +1,12 @@
 preh=2
 nexh=3
+battery=0
 
-temp=nexh-preh
-float(temp)
-temp=temp//2
-print(temp)
+
+
+if preh>nexh:
+    temp=preh-nexh
+    battery=2*temp
+elif preh<nexh:
+    temp=nexh-preh
+    temp=temp/2
