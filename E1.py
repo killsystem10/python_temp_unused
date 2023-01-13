@@ -9,12 +9,12 @@ high=[]
 temp=int(input())
 high=input().split()
 high=list(map(int,high))
-high.append(0)
+high.append(-1)
 
 for i in range(len(high)):
     preh=high[i]
     nexh=high[i+1]
-    if nexh==0:
+    if nexh==-1:
         break
     else:
         if preh<nexh:
