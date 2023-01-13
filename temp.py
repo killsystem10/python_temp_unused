@@ -5,14 +5,7 @@ usebattery=0
 savebattery=0
 high=[10,6,10,6,8,15,10,13,12,20,0]
 
-
-
-
-
-
-
-
-for i in range(11):
+for i in range(len(high)):
     preh=high[i]
     nexh=high[i+1]
     if nexh==0:
